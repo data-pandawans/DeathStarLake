@@ -14,15 +14,20 @@ A ideia é quebrarmos o projeto de datalake em alguns pontos chaves:
 
 Devemos usar as ferramentas básicas das clouds, para que devemos gastar o mínimo possível.
 
-## Fontes Sugeridas
+## Objetivo
 
-Como fontes de ingestão, a sugestão proposta é:
-* API: https://publicapis.dev/category/open-data
-* Crawler: em algum site de notícia
-* Banco de dados: https://basedosdados.org/dataset/75faee53-f6d0-4254-b4c4-5b0040c33368?table=0bf6a329-44a5-49ce-a9eb-d9ef52de8155
+* Criar um catálogo com informações tratadas disponibilizadas pela [API](https://swapi.dev/) do Star Wars;
+* Enriquecer dados com informações do IMBD, por exemplo;
+* Montar tabelas finais prontas para utilização no dashboard final.
 
 ## Clouds
 
 * AWS
 * GCP
 * Azure
+
+## APIs de Enriquecimento:
+
+* [WatchMode](https://api.watchmode.com/docs/)
+* [TasteDive](https://tastedive.com/read/api)
+* [OMDb](https://www.omdbapi.com/)
