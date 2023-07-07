@@ -47,6 +47,11 @@ DeathStarLake
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
+├── applications
+│   ├── power_bi
+│       └── README.md
+│   ├── tableau
+│       └── README.md
 ├── resources
 │   ├── inputs
 │       └── raw_data.csv
@@ -56,9 +61,12 @@ DeathStarLake
 │   └── ingest_data.py
 │   └── transform_data.py
 │   └── load_data.py
-├── notebooks
-│   ├── run-save-cleaned-data.ipynb
-│   └── run-tests.ipynb
+├── dev
+│   ├── arthur
+│   ├── dgeison
+│   ├── guerra
+│   ├── nassif
+│   ├── renato
 ├── tests
 │   └── test_clean_columns.py
 └── transformations
