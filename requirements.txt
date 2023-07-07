@@ -1,1 +1,6 @@
+awswrangler==3.2.1
+black==23.3.0
+boto3==1.28.1
+ipykernel==6.24.0
+requests==2.31.0
 pandas==2.0.2

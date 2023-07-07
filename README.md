@@ -38,7 +38,11 @@ Para iniciar o ambiente local, basta ter o python3 instalado e seguir os seguint
 
   1. `python3 -m venv env`
   2. `source env/bin/activate`
-  3. `pip install -r requirements.txt`
+  3. `make install-requirements`
+
+Toda vez que você for iniciar uma task e entrar no repositório, é importante ativar o ambiente com o comando 2.
+
+Para desativar, bastar dar o comando `deactivate`
 
 ## Estrutura de Pastas
 
