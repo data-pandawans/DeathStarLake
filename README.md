@@ -41,7 +41,6 @@ Para iniciar o ambiente local, basta ter o python3 instalado e seguir os seguint
   3. Linux/Mac: `make install-requirements` | Windows: `python3 -m pip install -r requirements.txt`
 
 Toda vez que você for iniciar uma task e entrar no repositório, é importante ativar o ambiente com o comando 2.
-
 Para desativar, bastar dar o comando `deactivate`
 
 ## Estrutura de Pastas
