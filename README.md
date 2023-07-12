@@ -37,8 +37,8 @@ Devemos usar as ferramentas básicas das clouds, para que devemos gastar o míni
 Para iniciar o ambiente local, basta ter o python3 instalado e seguir os seguintes passos:
 
   1. `python3 -m venv env`
-  2. `source env/bin/activate`
-  3. `make install-requirements`
+  2. Linux/Mac: `source env/bin/activate` | Windows: `env\Scripts\activate.bat` ou `env\Scripts\Activate.ps1`
+  3. Linux/Mac: `make install-requirements` | Windows: `python3 -m pip install -r requirements.txt`
 
 Toda vez que você for iniciar uma task e entrar no repositório, é importante ativar o ambiente com o comando 2.
 
