@@ -43,11 +43,9 @@ def main():
     s3 = S3Loader()
 
     tables = ['films','people','planets','species','starships','vehicles']
-    # tables = ['films']
     for table_name in tables:
         print(f"Iniciando o carregamento da tabela {table_name}...")
         df = sw_client.extract_data(table_name)
-        # df.to_csv('teste.csv', sep='^')
         print(f"Subindo {table_name} para o S3...")
         s3.create_database('raw-anakin')
         s3.load_data(
