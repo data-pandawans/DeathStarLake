@@ -4,3 +4,6 @@ env/*
 
 #secrets
 .env
+
+# retirando pycache
+*/__pycache__/*

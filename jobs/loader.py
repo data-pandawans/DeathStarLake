@@ -18,17 +18,22 @@ class S3Loader:
         # TO-DO: criar os logs e checar erro
         wr.catalog.create_database(database_name, exist_ok=True, boto3_session=self.session)
 
-    def load_data(self, data, path, database_name, table_name):
+    def load_data(self, data, path, layer, database_name, table_name):
         # TO-DO: criar os logs e checar erro
-        res = wr.s3.to_csv(
-            df=data,
-            sep=';',
-            path=path,
-            dataset=True,
-            mode="overwrite",
-            database=database_name,
-            table=table_name,
-            boto3_session=self.session
-        )
+        if layer == 'raw':
+            res = wr.s3.to_csv(
+                df=data,
+                sep='|',
+                path=path,
+                dataset=True,
+                mode="overwrite",
+                database=database_name,
+                table=table_name,
+                boto3_session=self.session
+            )
+        else:
+            # TO-DO: criar para próximas camadas
+            pass
+            
 
         return res
