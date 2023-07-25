@@ -1,3 +1,9 @@
 # environment folder
 env/*
 .pyenv/*
+
+#secrets
+.env
+
+# retirando pycache
+*/__pycache__/*
