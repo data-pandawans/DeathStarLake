@@ -6,7 +6,7 @@ env/*
 .env
 
 # retirando cache
-*/__pycache__/*
+__pycache__
 *DS_Store*
 
 # build
