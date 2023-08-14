@@ -12,7 +12,7 @@ class S3Loader:
         aws_secret_access_key = os.getenv("aws_secret_access_key")
         self.session = boto3.session.Session(aws_access_key_id=aws_access_key_id,
                                         aws_secret_access_key=aws_secret_access_key, 
-                                        region_name='us-east-1')
+                                        region_name='us-east-2')
         
     def create_database(self, database_name):
         # TO-DO: criar os logs e checar erro

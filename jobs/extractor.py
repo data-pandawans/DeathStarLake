@@ -50,7 +50,7 @@ def main():
         s3.create_database('raw-anakin')
         s3.load_data(
             data=df,
-            path=f's3://bronze-anakin/{table_name}/',
+            path=f's3://bronze-raw-anakin/{table_name}/',
             layer='raw',
             database_name = 'raw-anakin', 
             table_name = table_name
