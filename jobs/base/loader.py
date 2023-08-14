@@ -1,6 +1,3 @@
-# from dotenv import load_dotenv
-import requests 
-import pandas as pd
 import awswrangler as wr
 import boto3
 import os
