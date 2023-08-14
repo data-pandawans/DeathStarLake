@@ -1,6 +1,5 @@
-import requests 
+import requests
 import pandas as pd
-from loader import S3Loader
 
 class SWAPIClient:
     def __init__(self):
@@ -37,25 +36,3 @@ class SWAPIClient:
             print(f"Erro ao extrair dados do endpoint {endpoint}. Status code: {response.status_code}")
             # Retorna None para indicar que ocorreu um erro na extração dos dados
             return None
-
-def main():
-    sw_client = SWAPIClient()
-    s3 = S3Loader()
-
-    tables = ['films','people','planets','species','starships','vehicles']
-    for table_name in tables:
-        print(f"Iniciando o carregamento da tabela {table_name}...")
-        df = sw_client.extract_data(table_name)
-        print(f"Subindo {table_name} para o S3...")
-        s3.create_database('raw-anakin')
-        s3.load_data(
-            data=df,
-            path=f's3://bronze-anakin/{table_name}/',
-            layer='raw',
-            database_name = 'raw-anakin', 
-            table_name = table_name
-        )
-        print(f"Finalizado o carregamento da tabela {table_name}.")
-
-if __name__ == "__main__":
-    main()
