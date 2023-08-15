@@ -53,7 +53,6 @@ SELECT
     IF( eye_color LIKE '%grey%', TRUE, FALSE) AS eye_gray,
     IF( eye_color LIKE '%orange%', TRUE, FALSE) AS eye_orange,
     IF( eye_color LIKE '%pink%', TRUE, FALSE) AS eye_pink,
-    IF( eye_color LIKE '%green%', TRUE, FALSE) AS eye_green,
     CASE 
         WHEN birth_year = 'unknown' THEN NULL 
         ELSE TRY_CAST(REGEXP_EXTRACT(birth_year, '([0-9.]+)') AS DOUBLE)
