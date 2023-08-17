@@ -13,7 +13,12 @@ SELECT
         WHEN max_atmosphering_speed = 'N/A' THEN NULL
         ELSE TRY_CAST(REPLACE(max_atmosphering_speed, 'km', '') AS INT)
     END AS max_atmosphering_speed_km,
-    REPLACE(crew, ',', '.') AS crew,
+    CASE 
+        WHEN crew = 'unknown' THEN NULL
+        WHEN crew = 'N/A' THEN NULL
+        ELSE crew
+    END AS crew,
+    crew,
     CASE 
         WHEN passengers = 'unknown' THEN NULL
         WHEN passengers = 'N/A' THEN NULL
