@@ -1,9 +1,11 @@
 import awswrangler as wr
 import boto3
 import os
+from dotenv import load_dotenv
 
 class S3Loader:
     def __init__(self):
+        load_dotenv()
         aws_access_key_id = os.getenv("aws_access_key_id")
         aws_secret_access_key = os.getenv("aws_secret_access_key")
         self.session = boto3.session.Session(aws_access_key_id=aws_access_key_id,
@@ -35,7 +37,7 @@ class S3Loader:
                 mode="overwrite",
                 database=database_name,
                 table=table_name,
-                boto3_session=self.session
+                boto3_session=self.session,
             )
             
 
