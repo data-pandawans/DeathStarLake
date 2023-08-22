@@ -19,7 +19,7 @@ SELECT
     END AS gravity,
     TRY_CAST(surface_water AS INT) AS surface_water,
     TRY_CAST(population AS INT) AS population,
-    FROM_ISO8601_TIMESTAMP_NANOS(created) AS ts_created,
-    FROM_ISO8601_TIMESTAMP_NANOS(edited) AS ts_edited
+    CAST(FROM_ISO8601_TIMESTAMP_NANOS(created) AS TIMESTAMP) AS ts_created,
+    CAST(FROM_ISO8601_TIMESTAMP_NANOS(edited) AS TIMESTAMP) AS ts_edited
 FROM planets
 WHERE name != 'unknown'
