@@ -52,32 +52,25 @@ Para desativar, bastar dar o comando `deactivate`
 ```txt
 DeathStarLake
 ├── requirements.txt
+├── metabase_configs.md
 ├── README.md
+├── makefile
 ├── .gitignore
-├── applications
-│   ├── power_bi
-│       └── README.md
-│   ├── tableau
-│       └── README.md
-├── resources
-│   ├── inputs
-│       └── raw_data.csv
-│   ├── outputs
-│       └── clean_data.parquet
 ├── jobs
-│   └── ingest_data.py
-│   └── transform_data.py
-│   └── load_data.py
+│   └── lambda_extraction.zip
+│   └── lambda_transformer.zip
 ├── dev
+│   ├── alex
 │   ├── arthur
 │   ├── dgeison
-│   ├── guerra
 │   ├── nassif
 │   ├── renato
-├── tests
-│   └── test_clean_columns.py
 └── transformations
-    └── base.sql
-    └── clean_data.sql
-    └── pivot_data.sql
+    └── padronizacao.md
+    └── films.sql
+    └── people.sql
+    └── planets.sql
+    └── species.sql
+    └── starships.sql
+    └── vehicles.sql
 ```
