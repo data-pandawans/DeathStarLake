@@ -2,6 +2,10 @@
 
 Projeto de desenvolvimento de um datalake com ingestão batch para startups usando o menor custo possível.
 
+## Vídeos
+
+[Playlist do Youtube](https://www.youtube.com/playlist?list=PLev38Fy3QTrdpy2pOLPnuGUE13PbcgCun)
+
 ## Proposta
 
 A ideia é quebrarmos o projeto de datalake em alguns pontos chaves:
